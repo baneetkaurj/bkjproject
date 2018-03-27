@@ -33,5 +33,14 @@ class UsersTest extends TestCase
         $this->assertTrue($user->update());
     }
 
-    
+    public function testDelete()
+    {
+        $user= new User();
+        $user->name='Baneet';
+        $user->email='jbaneetkaur@gmail.com';
+        $user->password='abcdefg';
+        $user->save();
+
+        $this->assertTrue($user->delete());
+    }
 }
