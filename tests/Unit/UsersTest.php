@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use PHPUnit\Framework\Constraint\IsType;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -14,7 +15,7 @@ class UsersTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+   /*public function testExample()
     {
         $user= new User();
         $user->name='Baneet';
@@ -31,7 +32,7 @@ class UsersTest extends TestCase
         $user->name = 'Steve Smith';
 
         $this->assertTrue($user->update());
-    }
+    }*/
 
     public function testDelete()
     {
@@ -42,5 +43,13 @@ class UsersTest extends TestCase
         $user->save();
 
         $this->assertTrue($user->delete());
+    }
+
+    public function testCount()
+    {
+        $user=User::all();
+        $recordCount=$user->count();
+        dd($recordCount);
+        $this->assertInternalType(IsType::TYPE_INT,$recordCount);
     }
 }
