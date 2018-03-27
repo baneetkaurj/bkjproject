@@ -49,7 +49,7 @@ class UsersTest extends TestCase
     {
         $user=User::all();
         $recordCount=$user->count();
-        dd($recordCount);
+        //dd($recordCount);
         $this->assertInternalType(IsType::TYPE_INT,$recordCount);
     }
 }
