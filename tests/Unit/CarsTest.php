@@ -52,4 +52,13 @@ class CarsTest extends TestCase
         //dd($recordCount);
         $this->assertInternalType(IsType::TYPE_INT,$recordCount);
     }
+
+    public function testModel()
+    {
+        $car=Car::find(1);
+        $year = (int) $car->year;
+        //dd($car);
+        $this->assertInternalType('int',(int) $car->year);
+
+    }
 }

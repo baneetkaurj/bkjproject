@@ -18,6 +18,6 @@ $factory->define(App\Car::class, function (Faker $faker) {
     return [
         'make' => $faker->randomElement($array = array ('ford','honda','toyota')),
         'model' => $faker->randomElement($array = array ('focus','fiesta','fusion')),
-        'year' => $faker->year($max = 'now') ,
-    ];
+        'year' => $faker->year($max = 'now'),
+            ];
 });
