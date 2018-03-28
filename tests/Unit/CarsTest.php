@@ -16,7 +16,7 @@ class CarsTest extends TestCase
      *
      * @return void
      */
-    /*public function testExample()
+    public function testExample()
     {
         $car= new Car();
         $car->make='Ford';
@@ -43,7 +43,7 @@ class CarsTest extends TestCase
         $car->save();
 
         $this->assertTrue($car->delete());
-    }*/
+    }
 
     public function testCount()
     {
@@ -53,12 +53,21 @@ class CarsTest extends TestCase
         $this->assertInternalType(IsType::TYPE_INT,$recordCount);
     }
 
-    public function testModel()
+    public function testYear()
     {
         $car=Car::find(1);
         $year = (int) $car->year;
         //dd($car);
         $this->assertInternalType('int',(int) $car->year);
+
+    }
+
+    public function testModel()
+    {
+        $car=Car::find(1);
+
+        //dd($car);
+        $this->assertInternalType('string', $car->model);
 
     }
 }

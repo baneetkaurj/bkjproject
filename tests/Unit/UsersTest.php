@@ -15,7 +15,7 @@ class UsersTest extends TestCase
      *
      * @return void
      */
-   /*public function testExample()
+   public function testExample()
     {
         $user= new User();
         $user->name='Baneet';
@@ -32,7 +32,7 @@ class UsersTest extends TestCase
         $user->name = 'Steve Smith';
 
         $this->assertTrue($user->update());
-    }*/
+    }
 
     public function testDelete()
     {
