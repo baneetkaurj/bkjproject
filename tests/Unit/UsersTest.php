@@ -19,7 +19,7 @@ class UsersTest extends TestCase
     {
         $this->assertTrue(true);
     }
-  /* public function testInsert()
+   public function testInsert()
     {
         $user= new User();
         $user->name='Baneet';
@@ -28,7 +28,7 @@ class UsersTest extends TestCase
 
         $this->assertTrue($user->save());
     }
-   /* public function testUpdate()
+   public function testUpdate()
     {
 
         $user = User::find(50);
@@ -37,19 +37,18 @@ class UsersTest extends TestCase
         $this->assertTrue($user->update());
     }
 
-    public function testDelete()
+   public function testDelete()
     {
-
-        $user = User::find(51);
+        $user= User::all()->last();
 
         $this->assertTrue($user->delete());
     }
 
-    public function testCount()
-    {
-        $user=User::all();
-        $recordCount=$user->count();
-        //dd($recordCount);
-        $this->assertInternalType(IsType::TYPE_INT,$recordCount);
-    }*/
-}
+public function testCount()
+      {
+          $user=User::all();
+          $recordCount=$user->count();
+         //dd($recordCount);
+          $this->assertInternalType(IsType::TYPE_INT,$recordCount);
+      }
+ }
