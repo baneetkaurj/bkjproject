@@ -66,6 +66,11 @@ class CarsTest extends TestCase
 
       }
 
+      public function testMake()
+      {
+          $this->assertContainsOnly('string', ['honda', 'toyota', 'ford']);
+      }
+
       public function testModel()
       {
           $car=Car::find(1);
